@@ -1,3 +1,7 @@
+# Pandoc Templates
+
+## origin notes
+
 Templates for [pandoc](http://github.com/jgm/pandoc).
 
 If you use custom templates, we recommend forking this repository,
@@ -7,6 +11,11 @@ pandoc releases.
 All of the templates in this repository are dual licensed, under both
 the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license
 (included below).
+
+## appended
+
+``extended.*`` is created for a few advanced features, especially for
+chinese package: ctex support.
 
 ----
 

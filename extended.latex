@@ -1,4 +1,13 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\usepackage{geometry}
+\geometry{
+  top=0.5in,
+  inner=0.5in,
+  outer=0.5in,
+  bottom=0.5in,
+  headheight=1.5ex,
+  headsep=1ex
+}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
@@ -18,12 +27,9 @@ $if(euro)$
   \usepackage{eurosym}
 $endif$
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
+  \usepackage{fontspec}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \usepackage{ctex}
 $if(euro)$
   \newcommand{\euro}{€}
 $endif$
