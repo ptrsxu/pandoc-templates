@@ -1,11 +1,11 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \usepackage{geometry}
 \geometry{
-  top=0.5in,
-  inner=0.5in,
-  outer=0.5in,
-  bottom=0.5in,
-  headheight=1.5ex,
+  top=0.8in,
+  inner=0.8in,
+  outer=0.8in,
+  bottom=0.8in,
+  headheight=1.4ex,
   headsep=1ex
 }
 $if(fontfamily)$
@@ -29,9 +29,13 @@ $endif$
 \else % if luatex or xelatex
   \usepackage{fontspec}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-  \usepackage{ctex}
 $if(euro)$
   \newcommand{\euro}{€}
+$endif$
+$if(ctex)$
+  % keep it using windowsnew fontset, for displaying some rare chinese characters
+  \usepackage[UTF8,fontset=none]{ctex}
+  \ctexset{fontset=windowsnew}
 $endif$
 $if(mainfont)$
     \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
@@ -117,6 +121,7 @@ $if(lhs)$
 $endif$
 $if(highlighting-macros)$
 $highlighting-macros$
+\renewenvironment{Shaded} { \begin{center} \begin{minipage}[c]{0.8\textwidth} \begin{snugshade}\small} {\end{snugshade} \end{minipage} \end{center} }
 $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
