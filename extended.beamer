@@ -64,7 +64,10 @@ $endif$
 \fi
 
 $if(ctex)$
-\usepackage{ctex}
+  % keep it using windowsnew fontset, if there's need for displaying some rare chinese characters
+  % \usepackage[UTF8,fontset=none]{ctex}
+  % \ctexset{fontset=windowsnew}
+  \usepackage[UTF8]{ctex}
 $endif$
 
 $if(theme)$
@@ -141,6 +144,7 @@ $if(tables)$
 $endif$
 $if(graphics)$
 \usepackage{graphicx,grffile}
+\usepackage{subfig}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
@@ -222,6 +226,9 @@ $if(subtitle)$
 $endif$
 $if(author)$
 \author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(institute)$
+\institute{$for(institute)$$institute$$sep$ \and $endfor$}
 $endif$
 \date{$date$}
 
