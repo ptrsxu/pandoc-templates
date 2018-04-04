@@ -17,16 +17,17 @@ $if(theme)$
 \newcommand{\themename}{\textbf{\textsc{$theme$}}\xspace}
 $endif$
 
-$if(algorithm2e)$
-\usepackage[linesnumbered,lined,ruled,commentsnumbered]{algorithm2e}
-$endif$
-
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
 \usepackage{lmodern}
 $endif$
+
+\usepackage{algorithm2e}
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
 \usepackage{amssymb,amsmath,amsfonts,mathrsfs}
+
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
