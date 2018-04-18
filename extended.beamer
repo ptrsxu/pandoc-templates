@@ -23,9 +23,10 @@ $else$
 \usepackage{lmodern}
 $endif$
 
-\usepackage{algorithm2e}
+\usepackage[linesnumbered,ruled,vlined,commentsnumbered]{algorithm2e}
 % \usepackage{algorithm}
 % \usepackage{algpseudocode}
+\usepackage{xcolor}
 \usepackage{amssymb,amsmath,amsfonts,mathrsfs}
 
 \usepackage{ifxetex,ifluatex}
