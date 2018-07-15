@@ -8,6 +8,7 @@
   headheight=1.4ex,
   headsep=1ex
 }
+\usepackage{multicol}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$

@@ -4,6 +4,7 @@
 \setbeamercolor{caption name}{fg=normal text.fg}
 \beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
 \usepackage{appendixnumberbeamer}
+\usepackage{multicol}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
